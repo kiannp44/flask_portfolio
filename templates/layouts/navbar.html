@@ -30,6 +30,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                     <a class="dropdown-item" href="/KianAboutMe/">About Kian</a>
                     <a class="dropdown-item" href="/IanAboutMe/">About Ian</a>
                     <a class="dropdown-item" href="/GavinAboutMe/">About Gavin</a>
+
                 </div>
             </li>
 
@@ -44,11 +45,31 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                     <a class="dropdown-item" href="/Pokedex/">Pokedex</a>
                     <a class="dropdown-item" href="/PokemonBattle/">PokemonBattle</a>
                     <a class="dropdown-item" href="/Random/">Random</a>
-
                 </div>
             </li>
         </div>
 
+        <div class="search">
+            <input id="search" type="search" placeholder="Search" aria-label="Search">
+        </div>
+        <script>
+            const search = document.getElementById('search');
+            const google = 'https://www.google.com/search?q=site%3A+';
+            const site = 'https://pokeman.cf';
+
+            function submitted(event) {
+                if (event.key === 'Enter') {
+                    event.preventDefault();
+                    const url = google
+                        + site
+                        + '+'
+                        + search.value;
+                    const win = window.open(url, '_blank');
+                    win.focus();
+                }
+            }
+            search.addEventListener('keypress', submitted);
+        </script>
 
     </div>
 </nav>
