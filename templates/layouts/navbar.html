@@ -21,7 +21,14 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             <a class="nav-link" href={{ url_for('pokemon_cards') }}>Pokemon Cards</a>
             <a class="nav-link" href={{ url_for('sports_cards') }}>Fortnite</a>
             <a class="nav-link" href={{ url_for('funko_pop') }}>Funko Pops</a>
-            <a class="nav-link" href="/crud_async/">Crud</a>
+            
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">CRUD</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <a class="dropdown-item" href="/searchbar/">Search</a>
+                    <a class="dropdown-item" href="/crud/">CRUD</a>
+                </div>
+            </li>
 
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">About Us</a>
