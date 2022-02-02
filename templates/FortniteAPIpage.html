@@ -1,0 +1,24 @@
+{% extends "layouts/base.html" %}
+{% set output = output %}
+
+{% block body %}
+
+<div class="bg-white text-dark">
+{{ response }}
+{% for item in output.data %}
+    <div class="row pt-3">
+    <div class="col-4 text-primary">
+        {{ item.item.name}}
+    </div>
+    <div class="col-4">
+        {{ item.item.description }}
+    </div>
+    </div>
+{% endfor %}
+</div>
+
+{%  endblock %}
+{%  block background %}
+{% endblock %}
+
+</html>

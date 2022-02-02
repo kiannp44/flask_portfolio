@@ -52,3 +52,20 @@ def GavinAboutMe():
     response = requests.request("GET", url, headers=headers, params=querystring)
     data = json.loads(response.text)
     return render_template("GavinAboutMe.html", moviequiz=data)
+
+@blueprint.route('/FortniteTracker/')
+def FortniteTracker():
+
+    url = "https://fortnite1.p.rapidapi.com/upcoming/get"
+
+    headers = {
+    'authorization': "string",
+    'x-rapidapi-host': "fortnite1.p.rapidapi.com",
+    'x-rapidapi-key': "9d1b75d842msh20486d8bf8d5c19p1904abjsneb2943a9124c"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+
+    print(response.text)
+
+    return render_template("FortniteAPIpage.html", output=response.json())
