@@ -69,3 +69,20 @@ def FortniteTracker():
     print(response.text)
 
     return render_template("FortniteAPIpage.html", output=response.json())
+
+@blueprint.route('/Fortnite/')
+def Fortnite():
+
+    url = "https://fortnite4.p.rapidapi.com/items/all"
+
+    headers = {
+    'x-rapidapi-host': "fortnite4.p.rapidapi.com",
+    'x-rapidapi-key': "9d1b75d842msh20486d8bf8d5c19p1904abjsneb2943a9124c"
+    }
+
+
+    response = requests.request("GET", url, headers=headers)
+
+    print(response.text)
+
+    return render_template("MoreFortnite.html", output=response.json())
