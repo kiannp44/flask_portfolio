@@ -3,16 +3,29 @@
 
 {% block body %}
 
+    <style>
+        body {
+            background-color: #1da1f2;
+            height: 100%;
+            width: 100%;
+        }
+
+    </style>
+
 <div class="bg-white text-dark">
 {{ response }}
 {% for item in output.data %}
     <div class="row pt-3">
+        <div class="col-3">
+            {{ item.item.type }}
+        </div>
     <div class="col-4 text-primary">
         {{ item.item.name}}
     </div>
     <div class="col-4">
         {{ item.item.description }}
     </div>
+
     </div>
 {% endfor %}
 </div>
