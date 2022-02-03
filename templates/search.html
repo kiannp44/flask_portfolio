@@ -7,6 +7,12 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
 <title>SQL search</title>
 {% endblock %}
 
+<style>
+  body {
+    background-color: lightblue;
+  }
+</style>
+
 {% block content %}
 <div class="container py-4 bg-primary">
   <!-- heading -->
@@ -32,7 +38,7 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
 </div>
 <!-- result of search -->
 <div class="container">
-  <div class="row" id="result">
+  <div class="row p-2 bg-dark" id="result">
   </div>
 </div>
 
@@ -74,10 +80,27 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
               // response contains valid result
               response.json().then(function(data) {
                 // loop through JSON and build HTML output
+
+                // create header divs for the columns
+                const headerdiv = document.createElement("div"); headerdiv.className = "row my-2 text-warning"; 
+                const col1header = document.createElement("div"); col1header.className = "col auto"; col1header.innerHTML = "Name";
+                const col2header = document.createElement("div"); col2header.className = "col auto"; col2header.innerHTML = "Email";
+                headerdiv.appendChild(col1header); headerdiv.appendChild(col2header); resultContainer.appendChild(headerdiv);
+                
                 for (let i = 0; i < data.length; i++) {
-                  const div = document.createElement("div");
-                  div.innerHTML = data[i].name + ' ' + data[i].email;
+                  // create result divs
+                  const div = document.createElement("div"); div.className = "row text-light";
+                  const col1 = document.createElement("div"); col1.className = "col auto";
+                  const col2 = document.createElement("div"); col2.className = "col auto";
+
+                  // input data into result divs
+                  col1.innerHTML = data[i].name;
+                  col2.innerHTML = data[i].email;
+
+                  // append result divs to the result container
                   resultContainer.appendChild(div);
+                  div.appendChild(col1);
+                  div.appendChild(col2);
                 }
               })
             })

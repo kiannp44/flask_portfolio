@@ -1,3 +1,5 @@
+{% extends "layouts/base.html" %}
+{% block body %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -126,8 +128,8 @@
     }
 </script>
 <div style="text-align:left;width:480px;">
-    <button onmousedown="moveup()" onmouseup="clearmove()" ontouchstart="moveup()">Up</button><br><br>
-    <button onmousedown="movedown()" onmouseup="clearmove()" ontouchstart="movedown()">Down</button>
+    <button onmousedown="movedown()" onmouseup="clearmove()" ontouchstart="movedown()">Down</button><br><br>
+    <button onmousedown="moveup()" onmouseup="clearmove()" ontouchstart="moveup()">Up</button>
 </div>
 </body>
 </html>
@@ -273,3 +275,4 @@
 </script>
 </body>
 </html>
+{% endblock %}
