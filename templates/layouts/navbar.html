@@ -19,7 +19,6 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
             <a class="nav-link" href={{ url_for('index') }}>Home</a>
             <a class="nav-link" href={{ url_for('pokemon_cards') }}>Pokemon Cards</a>
-            <a class="nav-link" href={{ url_for('sports_cards') }}>Fortnite</a>
             <a class="nav-link" href={{ url_for('funko_pop') }}>Funko Pops</a>
             <a class="nav-link" href="/crud_async/">Crud</a>
 
@@ -32,6 +31,15 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                     <a class="dropdown-item" href="/GavinAboutMe/">About Gavin</a>
                     <a class="dropdown-item" href="/FortniteTracker/">FortniteTracker</a>
                     <a class="dropdown-item" href="/Fortnite/">F</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">Fortnite</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <a class="dropdown-item" href={{ url_for('sports_cards') }}>Fortnite</a>
+                    <a class="dropdown-item" href="/FortniteTracker/">Fortnite Shop</a>
+                    <a class="dropdown-item" href="/Fortnite/">Fortnite Item Database</a>
                 </div>
             </li>
 
