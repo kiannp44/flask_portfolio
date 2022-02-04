@@ -58,25 +58,36 @@
 }
 </style>
 
-
-    <button onclick="scrollWin()" style="position:fixed">Pickaxe</button><br><br>
+    <div class="sidenav" style="position:fixed; z-index: 99999">
+        <div class="card" style="width: 8rem; height: 7rem; background-color: rgba(0,0,0,0)">
+            <div class="card-body p-1" style="width: 7rem; height: 2rem">
+                <a class="btn btn-primary text-white pb-3" onclick="scrollWin()">Pickaxe</a>
+            </div>
+            <div class="card-body" style="width: 7rem; height: 2rem">
+                <a class="btn btn-primary text-white" onclick="scrollSkin()">Skins</a>
+            </div>
+        </div>
+    </div>
 
     <style>
-        button{
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
+
+        button:hover {
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
         }
+        .sidenav > * {
+            position: sticky;
+            z-index: 99999;
+
+        }
+
     </style>
 
     <script>
 function scrollWin() {
   window.scrollTo(0, 2070);
+}
+function scrollSkin() {
+    window.scrollTo(0,200);
 }
 </script>
 
