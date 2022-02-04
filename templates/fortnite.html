@@ -1,18 +1,17 @@
+<!DOCTYPE html>
 {% extends "layouts/base.html" %}
 {% block body %}
-<!DOCTYPE html>
-<html lang="en">
-</head>
-    <meta charset="UTF-8">
-    <title>Fortnite</title>
-        <head>
-            <style>
-</style>
-            <style>
-body {
- background-image: url("/static/assets/Fortnite/fortnite_background.jpg");
-}
-</style>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Fortnite</title>
+    </head>
+    <body style="height: auto;">
+    <style>
+        body {
+            background-image: url("/static/assets/Fortnite/fortnite_background.jpg");
+        }
+    </style>
 
     <style>
 
@@ -61,6 +60,20 @@ body {
 
 
     <button onclick="scrollWin()" style="position:fixed">Pickaxe</button><br><br>
+
+    <style>
+        button{
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+    </style>
+
     <script>
 function scrollWin() {
   window.scrollTo(0, 2070);
@@ -346,4 +359,6 @@ function scrollWin() {
             <div class="hovercap">Chomp Jr</div> </div></td>
     </tr>
 </table>
+    </body>
+    </html>
 {% endblock %}
