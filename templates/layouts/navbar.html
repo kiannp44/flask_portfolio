@@ -18,7 +18,6 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         <div class="navbar-nav">
             <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
             <a class="btn btn-primary" href={{ url_for('index') }}>Home</a>
-            <a class="nav-link" href={{ url_for('pokemon_cards') }}>Pokemon Cards</a>
             <a class="nav-link" href={{ url_for('funko_pop') }}>Funko Pops</a>
             
             <li class="nav-item dropdown">
@@ -29,7 +28,8 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                 </div>
             </li>
 
-            <li class="nav-item dropdown">
+
+    <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">About Us</a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <a class="dropdown-item" href="/LucasAboutMe/">About Lucas</a>
@@ -40,7 +40,15 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                     <a class="dropdown-item" href="/Fortnite/">F</a>
                 </div>
             </li>
-
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">Pokemon</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <a class="dropdown-item" href="/Pokedex/">Pokedex</a>
+                    <a class="dropdown-item" href="/pokemoncards/">Pokemon Cards</a>
+                    <a class="dropdown-item" href="/FPCPokemon/">FPC Pokemon</a>
+                    <a class="dropdown-item" href="/PokemonBattle/">Pokemon Battle</a>
+                    <a class="dropdown-item" href="/pokemongo/"> Pokemon Go</a>
+            </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">Fortnite</a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
