@@ -86,3 +86,21 @@ def Fortnite():
     print(response.text)
 
     return render_template("MoreFortnite.html", output=response.json())
+
+
+@blueprint.route('/Alola/')
+def Alola():
+
+    url = "https://pokemon-go1.p.rapidapi.com/alolan_pokemon.json"
+
+    headers = {
+    'x-rapidapi-host': "pokemon-go1.p.rapidapi.com",
+    'x-rapidapi-key': "9d1b75d842msh20486d8bf8d5c19p1904abjsneb2943a9124c"
+    }
+
+
+    response = requests.request("GET", url, headers=headers)
+
+    print(response.text)
+
+    return render_template("AlolaPokemon.html", output=response.json())
