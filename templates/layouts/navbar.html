@@ -10,7 +10,16 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
 
 </head>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<style>
+    .bg-custom-1 {
+        background-color: #85144b;
+    }
+
+    .bg-custom-2 {
+        background-image: linear-gradient(10deg, #fb8b23 0%, #000000 100%);
+    }
+</style>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-inverse border-primary bg-custom-2">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -49,7 +58,6 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                     <a class="dropdown-item" href="/Fortnite/">Fortnite Item Database</a>
                 </div>
             </li>
-
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">Funko Pop Catalog</a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -64,6 +72,28 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                 </div>
             </li>
 
+            <div class="search">
+                <input id="search" type="search" placeholder="Search" aria-label="Search">
+            </div>
+            <script>
+                const search = document.getElementById('search');
+                const joe = 'https://www.google.com/search?q=site%3A+';
+                const site = 'https://pokeman.cf';
+
+                function submitted(event) {
+                    if (event.key === 'Enter') {
+                        event.preventDefault();
+                        const url = joe
+                            + site
+                            + '+'
+                            + search.value;
+                        const win = window.open(url, '_blank');
+                        win.focus();
+                    }
+                }
+                search.addEventListener('keypress', submitted);
+            </script>
+
             <div id="google_translate_element"></div>
             <script type="text/javascript">
                 function googleTranslateElementInit() {
@@ -74,29 +104,10 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                 }
             </script>
             <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
         </div>
 
-        <div class="search">
-            <input id="search" type="search" placeholder="Search" aria-label="Search">
-        </div>
-        <script>
-            const search = document.getElementById('search');
-            const google = 'https://www.google.com/search?q=site%3A+';
-            const site = 'https://pokeman.cf';
 
-            function submitted(event) {
-                if (event.key === 'Enter') {
-                    event.preventDefault();
-                    const url = google
-                        + site
-                        + '+'
-                        + search.value;
-                    const win = window.open(url, '_blank');
-                    win.focus();
-                }
-            }
-            search.addEventListener('keypress', submitted);
-        </script>
 
     </div>
 </nav>
