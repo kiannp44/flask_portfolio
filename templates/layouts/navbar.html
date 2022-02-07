@@ -19,14 +19,21 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         background-image: linear-gradient(10deg, #fb8b23 0%, #000000 100%);
     }
 </style>
+
 <nav class="navbar rounded navbar-expand-lg navbar-dark bg-dark navbar-inverse border-dark bg-custom-2">
+    <style>
+        .button:hover {
+            background-color: #000000;
+            color: white;
+        }
+    </style>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
-            <a class="btn btn-primary" href={{ url_for('index') }}>Home</a>
+            <a class="button btn btn-dark" href={{ url_for('index') }}>Home</a>
             <a class="nav-link" href={{ url_for('funko_pop') }}>Funko Pops</a>
             
             <li class="nav-item dropdown">
