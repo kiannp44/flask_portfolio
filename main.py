@@ -74,7 +74,8 @@ def pokemon_cards():
 
     response = requests.request("GET", url, headers=headers, params=querystring)
     data = json.loads(response.text)
-    return render_template("pokemon_cards.html", pokemoncard=data)
+    print(data)
+    return render_template("pokemon_cards.html", output=data)
 
 @app.route('/pokemongo/')
 def pokemon_go():
