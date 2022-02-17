@@ -74,8 +74,22 @@ def pokemon_cards():
 
     response = requests.request("GET", url, headers=headers, params=querystring)
     data = json.loads(response.text)
-    return render_template("pokemon_cards.html", pokemoncard=data)
+    print(data)
+    return render_template("pokemon_cards.html", output=data)
 
+@app.route('/pokemongo/')
+def pokemon_go():
+    url = "https://pokemon-go1.p.rapidapi.com/pokemon_evolutions.json"
+
+    headers = {
+        'x-rapidapi-host': "pokemon-go1.p.rapidapi.com",
+        'x-rapidapi-key': "9e4650470emshc2461cc01c07b29p18b9b5jsnfa759ab87fca"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+    data = json.loads(response.text)
+    print(data)
+    return render_template("pokemongo.html", output=data)
 
 @app.route('/fortnite/')
 def sports_cards():

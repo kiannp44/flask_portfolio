@@ -1,0 +1,236 @@
+{% include "layouts/navbar.html" %}
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<style>
+    html, body{
+        margin: 0;
+        height: 100%;
+        color: black;
+        overflow-x: hidden;
+    }
+
+    .container {
+        height: 50vh;
+        width: 50vh;
+        margin: 0rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 20px 20px;
+        position: relative; left: 125px; top: 50px;
+    }
+
+    .card-body {
+        background: white;
+    }
+    .card {
+        background: white;
+        font-family: white;
+    }
+
+    .collapsible {
+        background-color: black;
+        color: white;
+        padding: 13px;
+        border: none;
+        text-align: center;
+        outline: none;
+        font-size: 15px;
+    }
+    .active, .collapsible:hover {
+        background-color: midnightblue;
+    }
+    .content {
+        color: white;
+        padding:  18px;
+        display: none;
+        overflow: hidden;
+        background-color: black;
+    }
+    .cell {
+        color: white;
+        font-size: 40px;
+        text-align: center;
+        padding: 5px;
+        background: white;
+    }
+    .cell-1 {
+        background: white;
+        border: 1px black;
+    }
+</style>
+
+<title>Funko Pop Catalog: Star Wars</title>
+
+<div class = "container">
+    <div class="card" style="width:25rem;">
+        <div class="cell cell-1">
+            <img src="https://m.media-amazon.com/images/I/61EiXjb9uCS._AC_SX679_.jpg" style = "width:150px; height:300px;">
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Nintendo Wii U</h5>
+            <button type="button" class="collapsible" style = "width: 22rem;">
+                <p>$12- Boba Fett </p></button>
+            <div class="content" style="">
+                <p>With his customized Mandalorian armor, deadly weaponry, and silent demeanor, Boba Fett was one of the most feared bounty hunters in the galaxy. A genetic clone of his “father,” bounty hunter Jango Fett, Boba learned combat and martial skills from a young age.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" style="width:25rem"><div class="cell cell-1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm2CIFMR9Upcz0qnJspba6Pcx-6hPeDNoQeA&usqp=CAU" alt="Alps" style = "width:300px; height:300px;">
+    </div>
+        <div class="card-body">
+            <h5 class="card-title">Nintendo Wii U</h5>
+            <button type="button" class="collapsible" style = "width: 22rem;">
+                <p>$40- The Mandalorian w/ the Child</p></button>
+            <div class="content" style="">
+                <p>Mandalorians are fictional people associated with the planet Mandalore in the Star Wars universe and franchise created by George Lucas. ... First conceptualized for The Empire Strikes Back as a group of white-armored "supercommandos", the idea developed into a single bounty hunter character, Boba Fett.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" style="width:25rem"><div class="cell cell-1">
+        <img src="data:image/jpeg;base64,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" style = "width:200px; height:300px;">
+    </div>
+        <div class="card-body">
+            <h5 class="card-title">Nintendo Wii U</h5>
+            <button type="button" class="collapsible" style = "width: 22rem;">
+                <p>$15-Rey</p></button>
+            <div class="content" style="">
+                <p>Boba Fett is a dhjskhdjkashjdjhhasjhkdasjhdasdasdasdas</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" style="width:25rem"><div class = "cell cell-1">
+        <img src="https://m.media-amazon.com/images/I/71QR0wqjLSL._AC_UL320_.jpg" style = "width:210px; height:300px;">
+    </div>
+        <div class="card-body">
+            <h5 class="card-title">Nintendo Wii U</h5>
+            <button type="button" class="collapsible" style = "width: 22rem;">
+                <p>$13-Rey</p></button>
+            <div class="content" style="">
+                <p>Boba Fett is a dhjskhdjkashjdjhhasjhkdasjhdasdasdasdas</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" style="width:25rem"><div class = "cell cell-1">
+        <img src="https://m.media-amazon.com/images/I/510GfbgM02L._AC_UL320_.jpg" style = "width:270px; height:300px;">
+    </div>
+        <div class="card-body">
+            <h5 class="card-title">$8-Grogu (Baby Yoda)</h5>
+            <button type="button" class="collapsible" style = "width: 22rem;">
+                <p>hello</p></button>
+            <div class="content" style="">
+                <p>Boba Fett</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" style="width:25rem"><div class = "cell cell-1">
+        <img src="https://m.media-amazon.com/images/I/61R8o+0wGtS._AC_UL320_.jpg" style = "width:200px; height:300px;">
+    </div>
+        <div class="card-body">
+            <h5 class="card-title">12-Ahsoka</h5>
+            <button type="button" class="collapsible" style = "width: 22rem;">
+                <p>hello</p></button>
+            <div class="content" style="">
+                <p>Boba Fett</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" style="width:25rem"><div class = "cell cell-1">
+        <img src="https://m.media-amazon.com/images/I/515k8aPCgoL._AC_UL320_.jpg" style = "width:200px; height:300px;">
+    </div>
+        <div class="card-body">
+            <h5 class="card-title">$13- Princess Leia</h5>
+            <button type="button" class="collapsible" style = "width: 22rem;">
+                <p>hello</p></button>
+            <div class="content" style="">
+                <p>Boba Fett</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" style="width:25rem"><div class = "cell cell-1">
+        <img src="https://m.media-amazon.com/images/I/71QR0wqjLSL._AC_UL320_.jpg" style = "width:200px; height:300px;">
+    </div>
+        <div class="card-body">
+            <h5 class="card-title">$17- Kylo Ren</h5>
+            <button type="button" class="collapsible" style = "width: 22rem;">
+                <p>hello</p></button>
+            <div class="content" style="">
+                <p>Boba Fett</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" style="width:25rem"><div class = "cell cell-1">
+        <img src="https://m.media-amazon.com/images/I/61b83J7ITlS._AC_UL320_.jpg" style = "width:200px; height:300px;">
+    </div>
+        <div class="card-body">
+            <h5 class="card-title">$12- Crosshair</h5>
+            <button type="button" class="collapsible" style = "width: 22rem;">
+                <p>hello</p></button>
+            <div class="content" style="">
+                <p>Boba Fett</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" style="width:25rem"><div class = "cell cell-1">
+        <img src="https://m.media-amazon.com/images/I/612LNcrfAbS._AC_UL320_.jpg" style = "width:200px; height:300px;">
+    </div>
+        <div class="card-body">
+            <h5 class="card-title">$12- Wrecker</h5>
+            <button type="button" class="collapsible" style = "width: 22rem;">
+                <p>hello</p></button>
+            <div class="content" style="">
+                <p>Boba Fett</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" style="width:25rem"><div class = "cell cell-1">
+        <img src="https://m.media-amazon.com/images/I/61Emlhzum5S._AC_UL320_.jpg" style = "width:200px; height:300px;">
+    </div>
+        <div class="card-body">
+            <h5 class="card-title">$12- Echo</h5>
+            <button type="button" class="collapsible" style = "width: 22rem;">
+                <p>hello</p></button>
+            <div class="content" style="">
+                <p>Boba Fett</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
+
+</div> <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+</script>
+</body>
+</html>

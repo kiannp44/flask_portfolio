@@ -5,7 +5,7 @@
 
     <style>
         body {
-            background-color: #1da1f2;
+            background-color: #242526;
             height: 100%;
             width: 100%;
         }
@@ -20,19 +20,19 @@
     <div class="bg-primary text-white">
 
         <div class="row pt-5 px-5">
-            <h2 class="text-white"> Pokemon Cards API </h2>
+            <h2 class="text-white"> Pokemon GO API </h2>
         </div>
 
         <div class="row p-3">
-            {% for x in output["results"] %}
+            {% for item in output %}
 
                 <div class="col-3 p-4">
                     <div class="card bg-dark" style="width: 100%; height: 100%">
-{#                        <img src={{item.item.images.icon}} class="card-img-top" alt="...">#}
+{#                        <img src= class="card-img-top" alt="...">#}
                         <div class="card-body bg-dark">
-                            <h5 class="card-title text-warning">{{ x["name"]}}</h5>
-                            <p class="card-text text-grey pb-1">Pokemon Type: {{ x['types'][0]}}</p>
-{#                            <p class="card-text text-white">{{item.item.description}}</p>#}
+                            <h5 class="card-title text-warning">{{ item.pokemon_name }}</h5>
+                            <p class="card-text text-grey pb-1" style="color: red">Pokemon ID: {{ item.pokemon_id}}</p>
+                            <p class="card-text text-white">Pokemon Type: {{ item.form }}</p>
                             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                         </div>
                     </div>

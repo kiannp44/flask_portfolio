@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 {% extends "layouts/base.html" %}
 {% block body %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Fortnite</title>
-</head>
-<body style="height: auto;">
-<style>
-    body {
-        background-image: url("/static/assets/Fortnite/fortnite_background.jpg");
-    }
-</style>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Fortnite</title>
+    </head>
+    <body style="height: auto;">
+    <style>
+        body {
+            background-image: url("/static/assets/Fortnite/fortnite_background.jpg");
+        }
+    </style>
 
-<style>
+    <style>
 
     .hoverwrap {
-        position: relative;
-        max-width: 500px;
+      position: relative;
+      max-width: 500px;
     }
 
 
@@ -36,7 +36,7 @@
       color: white;
     }
     .hovercap {
-      visibility: hidden;
+      visibility: none;
       opacity: 0;
       transition: opacity 0.4s;
     }
@@ -58,11 +58,41 @@
 }
 </style>
 
+    <!--- <div class="sidenav" style="z-index: 99999">
+        <div class="card" style="width: 8rem; height: 32rem; background-color: rgba(0,0,0,0)"> --->
 
-    <button onclick="scrollWin()" style="position:fixed">Pickaxe</button><br><br>
+<center>
+    <h1 class="text-white">
+        A collection of our favorite Fortnite skins
+    </h1>
+</center>
+
+            <div class="card-body" style="width: 20rem; height: 2rem">
+                <a class="btn btn-primary text-white" onclick="scrollWin()">Click me to go to Pickaxes!</a>
+            </div>
+<br>
+        </div>
+    </div>
+
+<style>
+
+        button:hover {
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+        .sidenav > * {
+            position: sticky;
+            z-index: 99999;
+
+        }
+
+    </style>
+
     <script>
 function scrollWin() {
   window.scrollTo(0, 2070);
+}
+function scrollSkin() {
+    window.scrollTo(0,200);
 }
 </script>
 
@@ -205,8 +235,19 @@ function scrollWin() {
     </tr>
 </table>
 
+    <br>
+    <br>
+    <br>
 </div>
-
+    <center>
+        <h1 class="text-white">
+            Our favorite pickaxes
+        </h1>
+    </center>
+    <div class="card-body" style="width: 20rem; height: 2rem;">
+        <a class="btn btn-primary text-white" onclick="scrollSkin()">Click me to go back to skins!</a>
+    </div>
+    <br>
 <table>
 <tr>
     <td><div class="hoverwrap">
@@ -345,6 +386,6 @@ function scrollWin() {
             <div class="hovercap">Chomp Jr</div> </div></td>
     </tr>
 </table>
-</body>
-</html>
+    </body>
+    </html>
 {% endblock %}
