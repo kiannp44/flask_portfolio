@@ -1,7 +1,9 @@
 <!-- Navigation Bar from bootstrap
 This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
 -->
+
 <!DOCTYPE html>
+<div class="navborder">
 <html>
 
 <head>
@@ -133,4 +135,20 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
 
 
     </div>
+    <div id="google_translate_element"></div>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en'},
+                'google_translate_element'
+            );
+        }
+    </script>
+
+    <script type="text/javascript" src=
+            "https://translate.google.com/translate_a/element.js?
+cb=googleTranslateElementInit">
+    </script>
+
 </nav>
