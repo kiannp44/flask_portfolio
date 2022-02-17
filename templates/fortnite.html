@@ -1,24 +1,23 @@
+<!DOCTYPE html>
 {% extends "layouts/base.html" %}
 {% block body %}
-<!DOCTYPE html>
 <html lang="en">
-</head>
+<head>
     <meta charset="UTF-8">
     <title>Fortnite</title>
-        <head>
-            <style>
-</style>
-            <style>
-body {
- background-image: url("/static/assets/Fortnite/fortnite_background.jpg");
-}
+</head>
+<body style="height: auto;">
+<style>
+    body {
+        background-image: url("/static/assets/Fortnite/fortnite_background.jpg");
+    }
 </style>
 
-    <style>
+<style>
 
     .hoverwrap {
-      position: relative;
-      max-width: 500px;
+        position: relative;
+        max-width: 500px;
     }
 
 
@@ -37,7 +36,7 @@ body {
       color: white;
     }
     .hovercap {
-      visibility: none;
+      visibility: hidden;
       opacity: 0;
       transition: opacity 0.4s;
     }
@@ -346,4 +345,6 @@ function scrollWin() {
             <div class="hovercap">Chomp Jr</div> </div></td>
     </tr>
 </table>
+</body>
+</html>
 {% endblock %}

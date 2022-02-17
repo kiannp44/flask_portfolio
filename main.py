@@ -87,6 +87,11 @@ def funko_pops():
     return render_template("funko_pops.html")
 
 
+@app.route('/recommendations')
+def recommendations():
+    return render_template("recommendations.html")
+
+
 @app.errorhandler(404)
 def page_not_found(e):
     # note that we set the 404 status explicitly

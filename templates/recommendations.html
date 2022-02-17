@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+{% block body %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Funko pop Recommendations</title>
+    <style>
+        body {
+            background-image: url("/static/assets/LGcreatetask/background.jpg");
+            height: 500px;
+        }
+        .buttons {
+            height: 250px;
+            margin-top: 75px;
+            margin-left: 30px;
+        }
+        .buttons2 {
+            height: 250px;
+            margin-top: 75px;
+            margin-left: 125px;
+            margin-bottom: 130px;
+        }
+        .buttons3 {
+            margin-left: 100px;
+        }
+    </style>
+
+</head>
+<body style="height: auto;">
+<h1 style="text-align: center; color: white;">Funko Pops Recommendation Survey</h1>
+
+
+<img src="/static/assets/LGcreatetask/animebutton.PNG" class="buttons" alt="none">
+<img src="/static/assets/LGcreatetask/marvelbutton.PNG" class="buttons" alt="none">
+<img src="/static/assets/LGcreatetask/pokemonbutton.PNG" class="buttons" alt="none">
+<div class="buttons3">
+    <img src="/static/assets/LGcreatetask/fortnitebutton.PNG" class="buttons2" alt="none">
+    <img src="/static/assets/LGcreatetask/starwarsbutton.PNG" class="buttons2" alt="none">
+</div>
+
+</body>
+</html>
+{% endblock %}
