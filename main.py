@@ -95,6 +95,10 @@ def pokemon_go():
 def sports_cards():
     return render_template("fortnite.html")
 
+@app.route('/recommendations/')
+def recommendations():
+    return render_template("recommendations.html")
+
 
 @app.route('/funkopops/')
 def funko_pops():
