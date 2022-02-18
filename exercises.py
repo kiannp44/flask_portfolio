@@ -1,8 +1,16 @@
-age1 = 21
+age1 = 20
 age2 = 16
-print(age1, age2)
-age1, age2 = age2, age1
-print(age1, age2)
-print()
+def swap(age1, age2):
 
-#matrix = [ [1,2,3],[4,5,6],[7,8,9] ]
+    if age1 > age2:
+        age2, age1 = age1, age2
+
+    return age1, age2
+
+print(swap(age1, age2))
+
+def print_matrix(matrix):
+    print("classical nested loops using ij indexes")
+    for i in range(len(matrix)):
+        for j in range(len(matrix[i])):
+            print(matrix[i][j], end="")
