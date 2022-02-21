@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from blueprint import blueprint
 from __init__ import app
 import requests
@@ -54,11 +54,6 @@ def PokemonBattle():
 @app.route('/Random/')
 def Random():
     return render_template("Random.html")
-
-
-@app.route('/FunkoPops/')
-def funko_pop():
-    return render_template("funko_pop.html")
 
 
 @app.route('/pokemoncards/')
