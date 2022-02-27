@@ -92,9 +92,12 @@ def sports_cards():
 
 
 @app.route('/funkopops/')
-def funko_pops():
-    return render_template("funko_pops.html")
+def funko_pop():
+    return render_template("funko_pop.html")
 
+@app.route('/recommendations/')
+def recommendations():
+    return render_template("recommendations.html")
 
 
 @app.errorhandler(404)
