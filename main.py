@@ -97,7 +97,59 @@ def funko_pop():
 
 @app.route('/recommendations/')
 def recommendations():
-    return render_template("recommendations.html")
+    topic = [
+        {"topic": "/static/assets/LGcreatetask/animebutton.PNG", "file": "/subcategories1/"},
+        {"topic": "/static/assets/LGcreatetask/fortnitebutton.PNG", "file": "/subcategories2/"},
+        {"topic": "/static/assets/LGcreatetask/marvelbutton.PNG", "file": "/subcategories3/"},
+        {"topic": "/static/assets/LGcreatetask/starwarsbutton.PNG", "file": "/subcategories4/"},
+    ]
+    return render_template("LGcreatetask/recommendations.html", topic=topic)
+
+
+@app.route('/subcategories1/')
+def subcategories1():
+    topic1 = [
+        {"topic1": "/static/assets/LGcreatetask/shounenbutton.PNG"},
+        {"topic1": "/static/assets/LGcreatetask/shoujobutton.PNG"},
+        {"topic1": "/static/assets/LGcreatetask/fantasybutton.PNG"},
+        {"topic1": "/static/assets/LGcreatetask/kodomomukebutton.PNG", "file1": "/subcategories5/"},
+    ]
+    return render_template("LGcreatetask/subcategories1.html", topic=topic1)
+
+
+@app.route('/subcategories5/')
+def subcategories5():
+    return render_template("LCcreatetask/subcategories5.html")
+
+
+@app.route('/subcategories2/')
+def subcategories2():
+    topic2 = [
+        {"topic2": "/static/assets/LGcreatetask/chapter1button.PNG"},
+        {"topic2": "/static/assets/LGcreatetask/chapter2button.PNG"},
+        {"topic2": "/static/assets/LGcreatetask/chapter3button.PNG"},
+    ]
+    return render_template("LGcreatetask/subcategories2.html", topic=topic2)
+
+
+@app.route('/subcategories3/')
+def subcategories3():
+    topic3 = [
+        {"topic3": "/static/assets/LGcreatetask/avengersbutton.PNG"},
+        {"topic3": "/static/assets/LGcreatetask/guardiansofthegalaxybutton.PNG"},
+        {"topic3": "/static/assets/LGcreatetask/norsemythologybutton.PNG"},
+    ]
+    return render_template("LGcreatetask/subcategories3.html", topic=topic3)
+
+
+@app.route('/subcategories4/')
+def subcategories4():
+    topic4 = [
+        {"topic4": "/static/assets/LGcreatetask/lightsidebutton.PNG"},
+        {"topic4": "/static/assets/LGcreatetask/darksidebutton.PNG"},
+        {"topic4": "/static/assets/LGcreatetask/neitherbutton.PNG"},
+    ]
+    return render_template("LGcreatetask/subcategories4.html", topic=topic4)
 
 
 @app.errorhandler(404)
