@@ -3,35 +3,125 @@
 {% block body %}
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>Anime Categories</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
             background-image: url("/static/assets/LGcreatetask/background.jpg");
         }
-        .buttons {
-            height: 250px;
-            margin-top: 75px;
+
+        .dropbtn {
+            height: 180px;
+            margin-top: 150px;
             margin-left: 30px;
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-gap: 20px;
         }
-    </style>
 
+        .dropbtn:hover, .dropbtn:focus {
+            background-color: #2980B9;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown a:hover {background-color: #ddd;}
+
+        .show {display: block;}
+    </style>
 </head>
 <body style="height: auto;">
 <h1 style="text-align: center; color: white;">Anime Categories</h1>
-<div class="buttons">
-    {% for x in topic %}
-    <!--    iteration that puts dictionary under route in main.py repeatedly inside "buttons" css-->
-    <div class="text">
-        <a href="{{x['file1']}}">
-            <img src={{x["topic1"]}} alt="none" style="height: 250px;">
-        </a>
+<div class="dropdown">
+    <input src="/static/assets/LGcreatetask/shounenbutton.png" alt="none" type="image" onclick="myFunction()" class="dropbtn">
+    <div id="myDropdown" class="dropdown-content">
+        <a href="https://www.gamestop.com/collectibles/statues/products/bandai-one-piece-monkey-d.-luffy-anniversary-ichibansho-3.93-in-statue/298815.html?gclid=EAIaIQobChMI1c2C--qh9gIV8QutBh3jFAIgEAQYASABEgJ57fD_BwE&gclsrc=aw.ds">Monkey D. Luffy</a>
+        <a href="https://www.walmart.com/ip/SeekFunning-6-Naruto-Figure-Vibration-Stars-Uzumaki-Naruto-Figure-for-Kids-Birthday-Christmas-Gifts-Desk-Decor/711038941?wmlspartner=wlpa&selectedSellerId=101122892&&adid=22222222227561012446&wl0=&wl1=g&wl2=c&wl3=571853932003&wl4=pla-1568760856053&wl5=9031350&wl6=&wl7=&wl8=&wl9=pla&wl10=534344292&wl11=online&wl12=711038941&veh=sem&gclid=EAIaIQobChMIvuGJluuh9gIVQQnnCh3tmQqCEAQYBiABEgINf_D_BwE&gclsrc=aw.ds">Naruto Uzumaki</a>
+        <a href="https://www.gamestop.com/collectibles/figures/products/banpresto-bleach-ichigo-kurosaki-soul-entered-5.1-in-figure/335320.html?gclid=EAIaIQobChMI2fOtvuuh9gIVRxitBh2BuQ3pEAQYAyABEgLgFfD_BwE&gclsrc=aw.ds">Ichigo Kurosaki</a>
     </div>
-    {% endfor %}
 </div>
+
+<div class="dropdown">
+    <input src="/static/assets/LGcreatetask/shoujobutton.png" alt="none" type="image" onclick="myFunction1()" class="dropbtn">
+    <div id="myDropdown1" class="dropdown-content">
+        <a href="https://solarisjapan.com/collections/toradora-taiga/products/toradora-aisaka-taiga-brilliant-stage-1-8-megahouse">Taiga Aisaka</a>
+        <a href="https://otsukai.com/item/21257">Takumi Usui</a>
+        <a href="https://www.ebay.com/itm/165156653054?chn=ps&_trkparms=ispr%3D1&amdata=enc%3A1nZqad4plT8SJVH84LDrlJw78&norover=1&mkevt=1&mkrid=711-117182-37290-0&mkcid=2&itemid=165156653054&targetid=1599090336377&device=c&mktype=&googleloc=9031350&poi=&campaignid=15275224983&mkgroupid=131097072938&rlsatarget=pla-1599090336377&abcId=9300697&merchantid=112336786&gclid=EAIaIQobChMI4dKMxeyh9gIVSAutBh0Oqgo8EAQYBSABEgL5PvD_BwE">Madoka Yuuki</a>
+    </div>
+</div>
+
+<div class="dropdown">
+    <input src="/static/assets/LGcreatetask/fantasybutton.png" alt="none" type="image" onclick="myFunction2()" class="dropbtn">
+    <div id="myDropdown2" class="dropdown-content">
+        <a href="https://www.aliexpress.com/item/1005002974103504.html?spm=a2g0o.productlist.0.0.1d035b9bRcKA8f&algo_pvid=4c7fd781-972f-4d42-9dc7-ce7ffd474e43&algo_exp_id=4c7fd781-972f-4d42-9dc7-ce7ffd474e43-3&pdp_ext_f=%7B%22sku_id%22%3A%2212000023028265191%22%7D&pdp_pi=-1%3B149.49%3B-1%3B-1%40salePrice%3BUSD%3Bsearch-mainSearch">Guts</a>
+        <a href="https://www.aliexpress.com/item/1005003108126013.html?spm=a2g0o.productlist.0.0.641972b5hMCaDd&algo_pvid=1db52f66-279f-4976-a396-0b57cfd57fba&algo_exp_id=1db52f66-279f-4976-a396-0b57cfd57fba-9&pdp_ext_f=%7B%22sku_id%22%3A%2212000024128205465%22%7D&pdp_pi=-1%3B46.28%3B-1%3B-1%40salePrice%3BUSD%3Bsearch-mainSearch">Rimuru</a>
+        <a href="https://www.aliexpress.com/item/1005001632054507.html?spm=a2g0o.search0304.0.0.46d06b51jTu4C5&algo_pvid=d3b562c4-0f17-4658-b87f-271574b85dab&algo_exp_id=d3b562c4-0f17-4658-b87f-271574b85dab-20">Touka Kirishima</a>
+    </div>
+</div>
+
+<div class="dropdown">
+    <input src="/static/assets/LGcreatetask/kodomomukebutton.png" alt="none" type="image" onclick="myFunction3()" class="dropbtn">
+    <div id="myDropdown3" class="dropdown-content">
+        <a href="https://www.amazon.com/Figuarts-Pok%C3%A9mon-Ketchum-painted-action/dp/B06XCD52YD">Ash Ketchum</a>
+        <a href="https://www.amazon.com/Funko-POP-Anime-Doraemon-Action/dp/B016MUY7WS/ref=sr_1_3?crid=2H46JM4WZJNRN&keywords=Doraemon&qid=1646032677&s=toys-and-games&sprefix=doraemon%2Ctoys-and-games%2C132&sr=1-3">Doraemon</a>
+        <a href="https://www.amazon.com/gp/product/B016YX7DH4/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B016YX7DH4&linkCode=as2&tag=paulsemelcom-20&linkId=38d92d8b0e5f475624813863da40aa85">Babymetal</a>
+    </div>
+</div>
+
+<script>
+    /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    function myFunction1() {
+        document.getElementById("myDropdown1").classList.toggle("show");
+    }
+
+    function myFunction2() {
+        document.getElementById("myDropdown2").classList.toggle("show");
+    }
+
+    function myFunction3() {
+        document.getElementById("myDropdown3").classList.toggle("show");
+    }
+
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
+
 </body>
-</html>
 {% endblock %}

@@ -108,13 +108,7 @@ def recommendations():
 
 @app.route('/subcategories1/')
 def subcategories1():
-    topic1 = [
-        {"topic1": "/static/assets/LGcreatetask/shounenbutton.PNG"},
-        {"topic1": "/static/assets/LGcreatetask/shoujobutton.PNG"},
-        {"topic1": "/static/assets/LGcreatetask/fantasybutton.PNG"},
-        {"topic1": "/static/assets/LGcreatetask/kodomomukebutton.PNG", "file1": "/subcategories5/"},
-    ]
-    return render_template("LGcreatetask/subcategories1.html", topic=topic1)
+    return render_template("LGcreatetask/subcategories1.html")
 
 
 @app.route('/subcategories5/')
@@ -124,32 +118,17 @@ def subcategories5():
 
 @app.route('/subcategories2/')
 def subcategories2():
-    topic2 = [
-        {"topic2": "/static/assets/LGcreatetask/chapter1button.PNG"},
-        {"topic2": "/static/assets/LGcreatetask/chapter2button.PNG"},
-        {"topic2": "/static/assets/LGcreatetask/chapter3button.PNG"},
-    ]
-    return render_template("LGcreatetask/subcategories2.html", topic=topic2)
+    return render_template("LGcreatetask/subcategories2.html")
 
 
 @app.route('/subcategories3/')
 def subcategories3():
-    topic3 = [
-        {"topic3": "/static/assets/LGcreatetask/avengersbutton.PNG"},
-        {"topic3": "/static/assets/LGcreatetask/guardiansofthegalaxybutton.PNG"},
-        {"topic3": "/static/assets/LGcreatetask/norsemythologybutton.PNG"},
-    ]
-    return render_template("LGcreatetask/subcategories3.html", topic=topic3)
+    return render_template("LGcreatetask/subcategories3.html")
 
 
 @app.route('/subcategories4/')
 def subcategories4():
-    topic4 = [
-        {"topic4": "/static/assets/LGcreatetask/lightsidebutton.PNG"},
-        {"topic4": "/static/assets/LGcreatetask/darksidebutton.PNG"},
-        {"topic4": "/static/assets/LGcreatetask/neitherbutton.PNG"},
-    ]
-    return render_template("LGcreatetask/subcategories4.html", topic=topic4)
+    return render_template("LGcreatetask/subcategories4.html")
 
 
 @app.errorhandler(404)
