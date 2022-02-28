@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+{% block body %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Funko Pop Reccomendation Filter</title>
+    <style>
+        body {
+            background-image: url("/static/assets/LGcreatetask/background.jpg");
+            height: 500px;
+        }
+        .buttons {
+            height: 250px;
+            margin-top: 75px;
+            margin-left: 30px;
+        }
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+        /*.buttons2 {*/
+        /*    height: 250px;*/
+        /*    margin-top: 75px;*/
+        /*    margin-left: 125px;*/
+        /*    margin-bottom: 130px;*/
+        /*}*/
+        /*.buttons3 {*/
+        /*    margin-left: 100px;*/
+        /*}*/
+    </style>
+
+</head>
+<! the main cards starting here>
+<body style="height: auto;">
+<h1 style="text-align: center; color: white;">Funko Pops Recommendation Filter</h1>
+<input src="/static/assets/LGcreatetask/animebutton.PNG" class="buttons" alt="none" type="image" onclick="openCity(event, 'Anime')">
+<input src="/static/assets/LGcreatetask/pokemonbutton.PNG" class="buttons" alt="none" type="image" onclick="openCity(event, 'Pokemon')">
+<input src="/static/assets/LGcreatetask/fortnitebutton.PNG" class="buttons" alt="none" type="image" onclick="openCity(event, 'Fortnite')">
+<input src="/static/assets/LGcreatetask/starwarsbutton.PNG" class="buttons" alt="none" type="image" onclick="openCity(event, 'Star Wars')">
+
+<! 2nd row cards starting here>
+<div id="Anime" class="tabcontent">
+    <h3>Anime</h3>
+    <p><input src="/static/assets/LGcreatetask/animebutton.PNG" class="buttons" alt="none" type="image" onclick="openCity(event, 'London')">\
+        <input src="/static/assets/LGcreatetask/animebutton.PNG" class="buttons" alt="none" type="image" onclick="openCity(event, 'London')">\
+        <input src="/static/assets/LGcreatetask/animebutton.PNG" class="buttons" alt="none" type="image" onclick="openCity(event, 'London')">\
+        <input src="/static/assets/LGcreatetask/animebutton.PNG" class="buttons" alt="none" type="image" onclick="openCity(event, 'London')">\</p>
+</div>
+<div id="Pokemon" class="tabcontent">
+    <h3>Pokemon</h3>
+    <p><input src="/static/assets/LGcreatetask/animebutton.PNG" class="buttons" alt="none" type="image" onclick="openCity(event, 'Fire')">\
+        <input src="/static/assets/LGcreatetask/animebutton.PNG" class="buttons" alt="none" type="image" onclick="openCity(event, 'Water')">\
+        <input src="/static/assets/LGcreatetask/animebutton.PNG" class="buttons" alt="none" type="image" onclick="openCity(event, 'Electric')">\
+        <input src="/static/assets/LGcreatetask/animebutton.PNG" class="buttons" alt="none" type="image" onclick="openCity(event, 'Grass')">\</p>
+</div>
+<div id="Fortnite" class="tabcontent">
+    <h3>Fortnite</h3>
+    <p><input src="/static/assets/LGcreatetask/animebutton.PNG" class="buttons" alt="none" type="image" onclick="openCity(event, 'Boys')">\
+        <input src="/static/assets/LGcreatetask/animebutton.PNG" class="buttons" alt="none" type="image" onclick="openCity(event, 'Girls')">\
+        <input src="/static/assets/LGcreatetask/animebutton.PNG" class="buttons" alt="none" type="image" onclick="openCity(event, 'Animals')">\
+        <input src="/static/assets/LGcreatetask/animebutton.PNG" class="buttons" alt="none" type="image" onclick="openCity(event, 'Foods')">\</p>
+</div>
+<div id="Star Wars" class="tabcontent">
+    <h3>Star Wars</h3>
+    <p><input src="/static/assets/LGcreatetask/animebutton.PNG" class="buttons" alt="none" type="image" onclick="openCity(event, 'Light Side')">\
+        <input src="/static/assets/LGcreatetask/animebutton.PNG" class="buttons" alt="none" type="image" onclick="openCity(event, 'Dark Side')">\</p>
+</div>
+
+<! 3rd row cards starting here>
+
+<! 3 Anime>
+
+<! 3 Pokemon>
+<div id="Fire" class="tabcontent">
+    <h3>Fire</h3>
+    <p><input src="/static/assets/LGcreatetask/animebutton.PNG" class="buttons" alt="none" type="image" onclick="openCity(event, 'Fire')">\
+        <input src="/static/assets/LGcreatetask/animebutton.PNG" class="buttons" alt="none" type="image" onclick="openCity(event, 'Grass')">\</p>
+    <div id="Water" class="tabcontent">
+        <h3>Water</h3>
+        <p><input src="/static/assets/LGcreatetask/animebutton.PNG" class="buttons" alt="none" type="image" onclick="openCity(event, 'Fire')">\
+            <input src="/static/assets/LGcreatetask/animebutton.PNG" class="buttons" alt="none" type="image" onclick="openCity(event, 'Grass')">\</p>
+        <div id="Electric" class="tabcontent">
+            <h3>Electric</h3>
+            <p><input src="/static/assets/LGcreatetask/animebutton.PNG" class="buttons" alt="none" type="image" onclick="openCity(event, 'Fire')">\
+                <input src="/static/assets/LGcreatetask/animebutton.PNG" class="buttons" alt="none" type="image" onclick="openCity(event, 'Grass')">\</p>
+            <div id="Grass" class="tabcontent">
+                <h3>Grass</h3>
+                <p><input src="/static/assets/LGcreatetask/animebutton.PNG" class="buttons" alt="none" type="image" onclick="openCity(event, 'Fire')">\
+                    <input src="/static/assets/LGcreatetask/animebutton.PNG" class="buttons" alt="none" type="image" onclick="openCity(event, 'Grass')">\</p>
+
+                <! 3 Fortnite>
+
+                <! 3 Star Wars>
+
+            </div>
+            <script>
+                function openCity(evt, cityName) {
+                    var i, tabcontent, tablinks;
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                    }
+                    tablinks = document.getElementsByClassName("tablinks");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" active", "");
+                    }
+                    document.getElementById(cityName).style.display = "block";
+                    evt.currentTarget.className += " active";
+                }
+
+                // Get the element with id="defaultOpen" and click on it
+                document.getElementById("defaultOpen").click();
+            </script>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+{% endblock %}
