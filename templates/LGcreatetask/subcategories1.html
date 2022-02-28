@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Funko pop Recommendations</title>
+    <title>Anime Categories</title>
     <style>
         body {
             background-image: url("/static/assets/LGcreatetask/background.jpg");
@@ -21,13 +21,13 @@
 
 </head>
 <body style="height: auto;">
-<h1 style="text-align: center; color: white;">Funko Pops Recommendation Survey</h1>
+<h1 style="text-align: center; color: white;">Anime Categories</h1>
 <div class="buttons">
     {% for x in topic %}
     <!--    iteration that puts dictionary under route in main.py repeatedly inside "buttons" css-->
     <div class="text">
-        <a href="{{x['file']}}">
-            <img src={{x["topic"]}} alt="none" style="height: 250px;">
+        <a href="{{x['file1']}}">
+            <img src={{x["topic1"]}} alt="none" style="height: 250px;">
         </a>
     </div>
     {% endfor %}
