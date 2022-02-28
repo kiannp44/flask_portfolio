@@ -105,7 +105,6 @@ def recommendations():
     ]
     return render_template("LGcreatetask/recommendations.html", topic=topic)
 
-
 @app.route('/subcategories1/')
 def subcategories1():
     return render_template("LGcreatetask/subcategories1.html")

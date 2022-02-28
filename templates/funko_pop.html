@@ -3,77 +3,169 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<style>
-    <style>
-
-    body {
-        color: white;
-        margin: 0;
-        font-family: rubik;
-    }
-
-    .container {
-        padding: 40px;
-        margin: 0 auto;
-    }
-
-    h1 {
-        text-transform: uppercase;
-        text-align: center;
-        font-size: 54px;
-        color: #CCCCCC
-    }
-    <style>
-
-     p {
-         color: white;
-         margin: 0;
-         font-family: rubik;
-     }
-
-
-    }
-
-</style>
-
 <head>
     <meta charset="UTF-8">
-    <title>Funko Pops</title>
+    <title>Tic Tac Toe</title>
+</head>
+
+<style>
+
+    body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  color: greenyellow;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  cursor: pointer;
+  position: relative;
+}
+
+.tile {
+  color: currentColor;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-border {
+  border-right: 0.2em solid indigo;
+}
+
+.bottom-border {
+  border-bottom: 0.2em solid indigo;
+}
+
+.strike {
+  position: absolute;
+  background-color: darkred;
+}
+
+.strike-row-1 {
+  width: 100%;
+  height: 4px;
+  top: 15%;
+}
+.strike-row-2 {
+  width: 100%;
+  height: 4px;
+  top: 48%;
+}
+.strike-row-3 {
+  width: 100%;
+  height: 4px;
+  top: 83%;
+}
+.strike-column-1 {
+  height: 100%;
+  width: 4px;
+  left: 15%;
+}
+.strike-column-2 {
+  height: 100%;
+  width: 4px;
+  left: 48%;
+}
+.strike-column-3 {
+  height: 100%;
+  width: 4px;
+  left: 83%;
+}
+.strike-diagonal-1 {
+  width: 90%;
+  height: 4px;
+  top: 50%;
+  left: 5%;
+  transform: skewY(45deg);
+}
+.strike-diagonal-2 {
+  width: 90%;
+  height: 4px;
+  top: 50%;
+  left: 5%;
+  transform: skewY(-45deg);
+}
+
+h1 {
+  color: currentColor;
+}
+
+#game-over-area {
+  text-align: center;
+  border: indigo 8px solid;
+  padding: 50px;
+  width: 50%;
+  margin-top: 50px;
+}
+
+h2 {
+  color: currentColor;
+  font-size: 2em;
+  margin-top: 0px;
+}
+
+button {
+  background-color: transparent;
+  color: currentColor;
+  border: currentColor 1px solid;
+  padding: 10px;
+  font-size: 1.5em;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.x-hover:hover::after {
+  content: "X";
+  opacity: 0.4;
+}
+
+.o-hover:hover::after {
+  content: "O";
+  opacity: 0.4;
+}
+</style>
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link href="index.css" rel="stylesheet" />
 </head>
 <body>
-
+<h1>Tic Tac Toe</h1>
+<div id="board">
+    <div data-index="1" class="tile right-border bottom-border"></div>
+    <div data-index="2" class="tile right-border bottom-border"></div>
+    <div data-index="3" class="tile bottom-border"></div>
+    <div data-index="4" class="tile right-border bottom-border"></div>
+    <div data-index="5" class="tile right-border bottom-border"></div>
+    <div data-index="6" class="tile bottom-border"></div>
+    <div data-index="7" class="tile right-border"></div>
+    <div data-index="8" class="tile right-border"></div>
+    <div data-index="9" class="tile"></div>
+    <div id="strike" class="strike"></div>
+</div>
+<div id="game-over-area" class="hidden">
+    <h2 id="game-over-text">Winner is X</h2>
+    <button id="play-again">Play Again</button>
+</div>
+<script src="index.js"></script>
 </body>
 </html>
-<header class='masthead'>
-  <p class='masthead-intro'>Welcome to the</p>
-  <h1 class='masthead-heading'>Funko Pop Catalog!</h1>
-</header>
-<section class="introduction-section">
-    <h1>WHAT IS A FUNKO POP?</h1>
-    <p>A funko pop is a vinyl figure of a figure from pop culture, some example are jurassic park, pokemon, star wars and more, they have different versions, sizes, etc.</p>
-    <p>Funko pops are meant to show joy to people and also allows people to represent and show appreciation to what they enjoy or passionate about, for example, you may love a certain tv show and you could collect those funko pop figures for that specific show. </p>
-</section>
-<section class="location-section">
-    <h1>HISTORY OF FUNKO POP</h1>
-    <p>Funko was invented in 1998 by Mike Becker, it started off with bobbleheads and then as the company progressed, it became bigger and bigger eventually till now where they have more than just bobbleheads, such as the main focus of this page, Funko pops, there are also pop! sodas, action figures, snapsies and more. </p>
-</section>
-<section class="questions-section">
-    <h2>{place holder}</h2>
-    <p>{place holder}</p>
-<footer class="content-footer">
-    <p>Places to shop for Funko Pops and more Funko related:</p>
-    <ul class="social">
-        <li><a class="css-is-deranged" href="https://www.funko.com/">Funko official website</a></li>
-        <li><a class="css-is-deranged" href="https://www.gamestop.com/">Gamestop</a></li>
-          <li><a class="css-is-deranged" href="https://www.target.com/">Target</a></li>
-  
-</footer>
-    
-    <html>
-   <head>
-      <title>HTML Background Color</title>
-   </head>
-   <body style="background-color:#08457e;">
-   </body>
-</html>
 {% endblock %}
+
+
