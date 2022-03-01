@@ -91,9 +91,9 @@ def sports_cards():
     return render_template("fortnite.html")
 
 
-@app.route('/funkopops/')
-def funko_pop():
-    return render_template("funko_pop.html")
+@app.route('/tictactoe/')
+def tictactoe():
+    return render_template("tictactoe.html")
 
 @app.route('/recommendations/')
 def recommendations():
@@ -104,7 +104,6 @@ def recommendations():
         {"topic": "/static/assets/LGcreatetask/starwarsbutton.PNG", "file": "/subcategories4/"},
     ]
     return render_template("LGcreatetask/recommendations.html", topic=topic)
-
 
 @app.route('/subcategories1/')
 def subcategories1():
