@@ -53,7 +53,7 @@
 <body style="height: auto;">
 <h1 style="text-align: center; color: white;">Star Wars Categories</h1>
 <div class="dropdown">
-    <input src="/static/assets/LGcreatetask/darksidebutton.png" alt="none" type="image" onclick="myFunction()" class="dropbtn">
+    <input src="/static/assets/LGcreatetask/darksidebutton.png" alt="none" type="image" onclick="myFunction('myDropdown')" class="dropbtn">
     <div id="myDropdown" class="dropdown-content">
         <a href="https://www.amazon.com/Funko-POP-Star-Wars-428/dp/B0949D58GK/ref=sr_1_2?keywords=darth+vader+funko+pop&qid=1646039046&sprefix=Darth+Vader%2Caps%2C136&sr=8-2">Darth Vader</a>
         <a href="https://www.amazon.com/Funko-Pop-Deluxe-Star-Wars/dp/B09DL7PWXN/ref=sr_1_1?crid=11EFJ9HM6N711&keywords=darth+maul+funko+pop&qid=1646039070&sprefix=darth+maul+funko+pop%2Caps%2C126&sr=8-1">Darth Maul</a>
@@ -62,7 +62,7 @@
 </div>
 
 <div class="dropdown">
-    <input src="/static/assets/LGcreatetask/lightsidebutton.png" alt="none" type="image" onclick="myFunction1()" class="dropbtn">
+    <input src="/static/assets/LGcreatetask/lightsidebutton.png" alt="none" type="image" onclick="myFunction('myDropdown1')" class="dropbtn">
     <div id="myDropdown1" class="dropdown-content">
         <a href="https://www.amazon.com/Funko-Pop-Star-Wars-Protector/dp/B07GR74QY2/ref=sr_1_3?crid=2SOS0I1JN9INB&keywords=obi+wan+funko+pop&qid=1646039118&sprefix=obi+wan+funko+pop%2Caps%2C123&sr=8-3">Obi-Wan Kenobi</a>
         <a href="https://www.amazon.com/Funko-Pop-Star-Wars-Training/dp/B07XH4GN2K/ref=sr_1_2?crid=1GNGHA92RFD51&keywords=Luke+funko+pop&qid=1646039144&sprefix=luke+funko+pop%2Caps%2C132&sr=8-2">Luke Skywalker</a>
@@ -71,7 +71,7 @@
 </div>
 
 <div class="dropdown">
-    <input src="/static/assets/LGcreatetask/neitherbutton.png" alt="none" type="image" onclick="myFunction2()" class="dropbtn">
+    <input src="/static/assets/LGcreatetask/neitherbutton.png" alt="none" type="image" onclick="myFunction('myDropdown2')" class="dropbtn">
     <div id="myDropdown2" class="dropdown-content">
         <a href="https://www.amazon.com/Funko-Mandalorian-Child-Control-Exclusive/dp/B08G6MN6XD/ref=sr_1_3?crid=37XCHACUMSE3A&keywords=baby+yoda+funko+pop&qid=1646039195&sprefix=baby+yo+funko+pop%2Caps%2C120&sr=8-3">Baby Yoda</a>
         <a href="https://www.amazon.com/Funko-Pop-Deluxe-Mandalorian-Multicolor/dp/B087N9NLCC/ref=sr_1_1_sspa?crid=2MIRJ502R5TPY&keywords=mandalorian+funko+pop&qid=1646039214&sprefix=mandalorian+funko+pop%2Caps%2C122&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUExSDRERUNKOUc3TjRGJmVuY3J5cHRlZElkPUEwNTIzNzY3MTFQMlhMWEpPTVNKSyZlbmNyeXB0ZWRBZElkPUEwNzAxNjg4MTBRMDZNWUFGUFVOTCZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU=">Mandalorian</a>
@@ -82,22 +82,9 @@
 <script>
     /* When the user clicks on the button,
     toggle between hiding and showing the dropdown content */
-    function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
+    function myFunction(myDropdown) {
+        document.getElementById(myDropdown).classList.toggle("show");
     }
-
-    function myFunction1() {
-        document.getElementById("myDropdown1").classList.toggle("show");
-    }
-
-    function myFunction2() {
-        document.getElementById("myDropdown2").classList.toggle("show");
-    }
-
-    function myFunction3() {
-        document.getElementById("myDropdown3").classList.toggle("show");
-    }
-
 
     // Close the dropdown if the user clicks outside of it
     window.onclick = function(event) {

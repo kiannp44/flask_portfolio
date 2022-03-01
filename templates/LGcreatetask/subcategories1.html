@@ -53,7 +53,7 @@
 <body style="height: auto;">
 <h1 style="text-align: center; color: white;">Anime Categories</h1>
 <div class="dropdown">
-    <input src="/static/assets/LGcreatetask/shounenbutton.png" alt="none" type="image" onclick="myFunction()" class="dropbtn">
+    <input src="/static/assets/LGcreatetask/shounenbutton.png" alt="none" type="image" onclick="myFunction('myDropdown')" class="dropbtn">
     <div id="myDropdown" class="dropdown-content">
         <a href="https://www.gamestop.com/collectibles/statues/products/bandai-one-piece-monkey-d.-luffy-anniversary-ichibansho-3.93-in-statue/298815.html?gclid=EAIaIQobChMI1c2C--qh9gIV8QutBh3jFAIgEAQYASABEgJ57fD_BwE&gclsrc=aw.ds">Monkey D. Luffy</a>
         <a href="https://www.walmart.com/ip/SeekFunning-6-Naruto-Figure-Vibration-Stars-Uzumaki-Naruto-Figure-for-Kids-Birthday-Christmas-Gifts-Desk-Decor/711038941?wmlspartner=wlpa&selectedSellerId=101122892&&adid=22222222227561012446&wl0=&wl1=g&wl2=c&wl3=571853932003&wl4=pla-1568760856053&wl5=9031350&wl6=&wl7=&wl8=&wl9=pla&wl10=534344292&wl11=online&wl12=711038941&veh=sem&gclid=EAIaIQobChMIvuGJluuh9gIVQQnnCh3tmQqCEAQYBiABEgINf_D_BwE&gclsrc=aw.ds">Naruto Uzumaki</a>
@@ -62,7 +62,7 @@
 </div>
 
 <div class="dropdown">
-    <input src="/static/assets/LGcreatetask/shoujobutton.png" alt="none" type="image" onclick="myFunction1()" class="dropbtn">
+    <input src="/static/assets/LGcreatetask/shoujobutton.png" alt="none" type="image" onclick="myFunction('myDropdown1')" class="dropbtn">
     <div id="myDropdown1" class="dropdown-content">
         <a href="https://solarisjapan.com/collections/toradora-taiga/products/toradora-aisaka-taiga-brilliant-stage-1-8-megahouse">Taiga Aisaka</a>
         <a href="https://otsukai.com/item/21257">Takumi Usui</a>
@@ -71,7 +71,7 @@
 </div>
 
 <div class="dropdown">
-    <input src="/static/assets/LGcreatetask/fantasybutton.png" alt="none" type="image" onclick="myFunction2()" class="dropbtn">
+    <input src="/static/assets/LGcreatetask/fantasybutton.png" alt="none" type="image" onclick="myFunction('myDropdown2')" class="dropbtn">
     <div id="myDropdown2" class="dropdown-content">
         <a href="https://www.aliexpress.com/item/1005002974103504.html?spm=a2g0o.productlist.0.0.1d035b9bRcKA8f&algo_pvid=4c7fd781-972f-4d42-9dc7-ce7ffd474e43&algo_exp_id=4c7fd781-972f-4d42-9dc7-ce7ffd474e43-3&pdp_ext_f=%7B%22sku_id%22%3A%2212000023028265191%22%7D&pdp_pi=-1%3B149.49%3B-1%3B-1%40salePrice%3BUSD%3Bsearch-mainSearch">Guts</a>
         <a href="https://www.aliexpress.com/item/1005003108126013.html?spm=a2g0o.productlist.0.0.641972b5hMCaDd&algo_pvid=1db52f66-279f-4976-a396-0b57cfd57fba&algo_exp_id=1db52f66-279f-4976-a396-0b57cfd57fba-9&pdp_ext_f=%7B%22sku_id%22%3A%2212000024128205465%22%7D&pdp_pi=-1%3B46.28%3B-1%3B-1%40salePrice%3BUSD%3Bsearch-mainSearch">Rimuru</a>
@@ -80,7 +80,7 @@
 </div>
 
 <div class="dropdown">
-    <input src="/static/assets/LGcreatetask/kodomomukebutton.png" alt="none" type="image" onclick="myFunction3()" class="dropbtn">
+    <input src="/static/assets/LGcreatetask/kodomomukebutton.png" alt="none" type="image" onclick="myFunction('myDropdown3')" class="dropbtn">
     <div id="myDropdown3" class="dropdown-content">
         <a href="https://www.amazon.com/Figuarts-Pok%C3%A9mon-Ketchum-painted-action/dp/B06XCD52YD">Ash Ketchum</a>
         <a href="https://www.amazon.com/Funko-POP-Anime-Doraemon-Action/dp/B016MUY7WS/ref=sr_1_3?crid=2H46JM4WZJNRN&keywords=Doraemon&qid=1646032677&s=toys-and-games&sprefix=doraemon%2Ctoys-and-games%2C132&sr=1-3">Doraemon</a>
@@ -91,20 +91,8 @@
 <script>
     /* When the user clicks on the button,
     toggle between hiding and showing the dropdown content */
-    function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
-    }
-
-    function myFunction1() {
-        document.getElementById("myDropdown1").classList.toggle("show");
-    }
-
-    function myFunction2() {
-        document.getElementById("myDropdown2").classList.toggle("show");
-    }
-
-    function myFunction3() {
-        document.getElementById("myDropdown3").classList.toggle("show");
+    function myFunction(myDropdown) {
+        document.getElementById(myDropdown).classList.toggle("show");
     }
 
 
