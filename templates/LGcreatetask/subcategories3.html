@@ -53,7 +53,7 @@
 <body style="height: auto;">
 <h1 style="text-align: center; color: white;">Marvel Categories</h1>
 <div class="dropdown">
-    <input src="/static/assets/LGcreatetask/avengersbutton.png" alt="none" type="image" onclick="myFunction()" class="dropbtn">
+    <input src="/static/assets/LGcreatetask/avengersbutton.png" alt="none" type="image" class="dropbtn" onclick="myFunction('myDropdown')">
     <div id="myDropdown" class="dropdown-content">
         <a href="https://www.amazon.com/Funko-Avengers-Endgame-Glow-Dark/dp/B083YS9R43/ref=sr_1_3?keywords=marvel+funko+pop&qid=1646038826&sr=8-3">Iron Man</a>
         <a href="https://www.amazon.com/Funko-Pop-Deluxe-Marvel-Exclusive/dp/B083W31TBK/ref=sr_1_5?crid=22JL7JSG55R6Y&keywords=avengers+funko+pop&qid=1646038970&sprefix=avengers+funko+pop%2Caps%2C135&sr=8-5">Hulk</a>
@@ -62,7 +62,7 @@
 </div>
 
 <div class="dropdown">
-    <input src="/static/assets/LGcreatetask/guardiansofthegalaxybutton.png" alt="none" type="image" onclick="myFunction1()" class="dropbtn">
+    <input src="/static/assets/LGcreatetask/guardiansofthegalaxybutton.png" alt="none" type="image" class="dropbtn" onclick="myFunction('myDropdown1')">
     <div id="myDropdown1" class="dropdown-content">
         <a href="https://www.amazon.com/Funko-Pop-Marvel-Gamora-Daughter/dp/B08MQGSGZZ/ref=sr_1_1?crid=RXSTNYKYD0VL&keywords=guardians+of+the+galaxy+funko+pop&qid=1646038891&sprefix=guardians+of+the+galaxy+funko+pop%2Caps%2C125&sr=8-1">Gamora</a>
         <a href="https://www.amazon.com/Funko-POP-Movies-Guardians-Toddler/dp/B01M7YNDXI/ref=sr_1_4?crid=RXSTNYKYD0VL&keywords=guardians+of+the+galaxy+funko+pop&qid=1646038891&sprefix=guardians+of+the+galaxy+funko+pop%2Caps%2C125&sr=8-4">Groot</a>
@@ -71,7 +71,7 @@
 </div>
 
 <div class="dropdown">
-    <input src="/static/assets/LGcreatetask/norsemythologybutton.png" alt="none" type="image" onclick="myFunction2()" class="dropbtn">
+    <input src="/static/assets/LGcreatetask/norsemythologybutton.png" alt="none" type="image" class="dropbtn" onclick="myFunction('myDropdown2')">
     <div id="myDropdown2" class="dropdown-content">
         <a href="https://www.amazon.com/Funko-Pop-Marvel-Loki-President/dp/B08T5TWX96/ref=sr_1_4?keywords=marvel+funko+pop&qid=1646038826&sr=8-4">Loki</a>
         <a href="https://www.amazon.com/Funko-Pop-Deluxe-Marvel-Exclusive/dp/B0892SWZCV/ref=sr_1_1_sspa?crid=22JL7JSG55R6Y&keywords=avengers+funko+pop&qid=1646038963&sprefix=avengers+funko+pop%2Caps%2C135&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzRTdFNlJGNExMM0pRJmVuY3J5cHRlZElkPUEwNDQ2Mjc5Mlo1M1lBTDJSSFFUMCZlbmNyeXB0ZWRBZElkPUEwMjQ5OTE2M1Y1OUozREIxN1lDQSZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU=">Thor</a>
@@ -82,22 +82,9 @@
 <script>
     /* When the user clicks on the button,
     toggle between hiding and showing the dropdown content */
-    function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
+    function myFunction(myDropdown) {
+        document.getElementById(myDropdown).classList.toggle("show");
     }
-
-    function myFunction1() {
-        document.getElementById("myDropdown1").classList.toggle("show");
-    }
-
-    function myFunction2() {
-        document.getElementById("myDropdown2").classList.toggle("show");
-    }
-
-    function myFunction3() {
-        document.getElementById("myDropdown3").classList.toggle("show");
-    }
-
 
     // Close the dropdown if the user clicks outside of it
     window.onclick = function(event) {
